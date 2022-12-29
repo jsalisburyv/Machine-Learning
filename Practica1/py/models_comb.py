@@ -28,9 +28,9 @@ models = [
     svm.SVC(kernel='sigmoid', probability=True)
 ]
 
-for file in os.listdir('data/comb'):
+for file in os.listdir('../data/comb'):
     print(file.split('.')[0])
-    df = pd.read_csv('data/comb/'+file, index_col=0)
+    df = pd.read_csv('../data/comb/'+file, index_col=0)
     # Separate features from target
     X = df.drop(['word', 'lang'], axis=1)
     y = df['lang']
